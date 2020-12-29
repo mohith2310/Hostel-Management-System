@@ -11,7 +11,7 @@ $er='';
         $check_mail="SELECT * FROM STUDENTS WHERE mail='$mail'";
         $result_mail=mysqli_query($connection,$check_mail);
         $arr=mysqli_fetch_array($result_mail);
-        if($arr && $arr['password']=$pass){
+        if($arr && $arr['password']==$pass){
           $_SESSION['arr'] = $arr;
           header("Location:http://localhost/dbms/pages/student_main.php");
         }
